@@ -25,6 +25,8 @@ RUN pip install --no-cache-dir --upgrade pip \
 # Copy the application code
 COPY . .
 
+COPY .env .env
+
 # Add entrypoint script
 COPY entrypoint.sh /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
