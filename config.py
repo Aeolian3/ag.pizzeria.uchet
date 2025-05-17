@@ -1,7 +1,8 @@
-import dotenv
+from dotenv import load_dotenv
+import os
 
-load_dotenv = dotenv.load_dotenv()
-
+load_dotenv()
 class Config:
- TELEGRAM_BOT_TOKEN = dotenv.get_key(".env", "BOT_TOKEN")
- DB_URL = dotenv.get_key(".env", "DATABASE_URL")
+    TOKEN = os.getenv("BOT_TOKEN")
+    DB_URL = os.getenv("DATABASE_URL")
+
